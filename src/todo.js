@@ -194,7 +194,7 @@ export default function Todo() {
                 ) : (
                   <button
                     className="btn"
-                    // onClick={handleUpdate}
+                    onClick={handleUpdate}
                     style={{ backgroundColor: "#002D72", color: "white" }}
                   >
                     Update
@@ -203,7 +203,7 @@ export default function Todo() {
                 {editId !== item._id ? (
                   <button
                     className="btn btn-danger"
-                    // onClick={() => handleDelete(item._id)}
+                    onClick={() => handleDelete(item._id)}
                   >
                     Delete
                   </button>
