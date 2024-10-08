@@ -153,7 +153,7 @@ export default function Todo() {
       </div>
 
       <div className="row mt-3">
-        <h3>CCHAT</h3>
+        <h3>CHAT</h3>
         <ul className="list-group">
           {todos.map((item) => (
             <li
