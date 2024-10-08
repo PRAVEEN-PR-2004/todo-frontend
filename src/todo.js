@@ -122,19 +122,19 @@ export default function Todo() {
       </div>
 
       <div className="row">
-        <h3>Add Item</h3>
+        <h3>ENTER YOUR NAME</h3>
         {message && <p className="text-success">{message}</p>}
         <div className="form-group d-flex gap-2">
           <input
             name="title"
-            placeholder="Title"
+            placeholder="name"
             onChange={(e) => setTitle(e.target.value)}
             value={title}
             className="form-control"
             type="text"
           />
           <input
-            placeholder="Description"
+            placeholder="MESSAGE"
             onChange={(e) => setDescription(e.target.value)}
             value={description}
             className="form-control"
