@@ -118,7 +118,7 @@ export default function Todo() {
         className="row p-3 mb-5 bg-dark text-light text-center"
         style={{ backgroundColor: "#B0C4DE" }}
       >
-        <h1>TODO-LIST</h1>
+        <h1>CHAT ROOM CSE-B</h1>
       </div>
 
       <div className="row">
@@ -148,7 +148,7 @@ export default function Todo() {
       </div>
 
       <div className="row mt-3">
-        <h3>TODO</h3>
+        <h3>MSG</h3>
         <ul className="list-group">
           {todos.map((item) => (
             <li
