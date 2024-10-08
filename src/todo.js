@@ -183,37 +183,21 @@ export default function Todo() {
                 )}
               </div>
               <div className="d-flex gap-2">
-                {editId !== item._id ? (
-                  <button
-                    className="btn"
-                    style={{ backgroundColor: "#1F305E", color: "white" }}
-                    onClick={() => handleEdit(item)}
-                    disabled={editId !== -1}
-                  >
-                    Edit
-                  </button>
-                ) : (
-                  <button
-                    className="btn"
-                    onClick={handleUpdate}
-                    style={{ backgroundColor: "#002D72", color: "white" }}
-                  >
-                    Update
-                  </button>
-                )}
-                {editId !== item._id ? (
-                  <button
-                    className="btn btn-danger"
-                    onClick={() => handleDelete(item._id)}
-                    disabled={editId !== -1}
-                  >
-                    Delete
-                  </button>
-                ) : (
-                  <button className="btn btn-danger" onClick={handleEditCancel}>
-                    Cancel
-                  </button>
-                )}
+                <button
+                  className="btn"
+                  style={{ backgroundColor: "#1F305E", color: "white" }}
+                  onClick={() => handleEdit(item)}
+                  disabled
+                >
+                  Edit
+                </button>
+                <button
+                  className="btn btn-danger"
+                  onClick={() => handleDelete(item._id)}
+                  disabled
+                >
+                  Delete
+                </button>
               </div>
             </li>
           ))}
