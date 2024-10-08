@@ -12,7 +12,7 @@ export default function Todo() {
   const [editTitle, setEditTitle] = useState("");
   const [editDescription, setEditDescription] = useState("");
 
-  const apiUrl = "http://localhost:8000/todos";
+  const apiUrl = "http://localhost:4000/todos"; // Ensure this is the correct port
 
   const handleSubmit = () => {
     setError("");
@@ -46,7 +46,12 @@ export default function Todo() {
 
   const getItems = () => {
     fetch(apiUrl)
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return res.json();
+      })
       .then((data) => {
         setTodos(data);
       })
