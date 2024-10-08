@@ -12,7 +12,7 @@ export default function Todo() {
   const [editTitle, setEditTitle] = useState("");
   const [editDescription, setEditDescription] = useState("");
 
-  const apiUrl = "  http://localhost:3000";
+  const apiUrl = "http://localhost:8000/todos";
 
   const handleSubmit = () => {
     setError("");
@@ -118,23 +118,23 @@ export default function Todo() {
         className="row p-3 mb-5 bg-dark text-light text-center"
         style={{ backgroundColor: "#B0C4DE" }}
       >
-        <h1>CHAT ROOM CSE-B</h1>
+        <h1>TODO-LIST</h1>
       </div>
 
       <div className="row">
-        <h3>ENTER YOUR NAME</h3>
+        <h3>Add Item</h3>
         {message && <p className="text-success">{message}</p>}
         <div className="form-group d-flex gap-2">
           <input
             name="title"
-            placeholder="name"
+            placeholder="Title"
             onChange={(e) => setTitle(e.target.value)}
             value={title}
             className="form-control"
             type="text"
           />
           <input
-            placeholder="MESSAGE"
+            placeholder="Description"
             onChange={(e) => setDescription(e.target.value)}
             value={description}
             className="form-control"
@@ -148,7 +148,7 @@ export default function Todo() {
       </div>
 
       <div className="row mt-3">
-        <h3>MSG</h3>
+        <h3>TODO</h3>
         <ul className="list-group">
           {todos.map((item) => (
             <li
