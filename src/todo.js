@@ -123,23 +123,23 @@ export default function Todo() {
         className="row p-3 mb-5 bg-dark text-light text-center"
         style={{ backgroundColor: "#B0C4DE" }}
       >
-        <h1>TODO-LIST</h1>
+        <h1>MSG TO</h1>
       </div>
 
       <div className="row">
-        <h3>Add Item</h3>
+        <h3>MESSAGE</h3>
         {message && <p className="text-success">{message}</p>}
         <div className="form-group d-flex gap-2">
           <input
             name="title"
-            placeholder="Title"
+            placeholder="name"
             onChange={(e) => setTitle(e.target.value)}
             value={title}
             className="form-control"
             type="text"
           />
           <input
-            placeholder="Description"
+            placeholder="message"
             onChange={(e) => setDescription(e.target.value)}
             value={description}
             className="form-control"
@@ -153,7 +153,7 @@ export default function Todo() {
       </div>
 
       <div className="row mt-3">
-        <h3>TODO</h3>
+        <h3>CCHAT</h3>
         <ul className="list-group">
           {todos.map((item) => (
             <li
