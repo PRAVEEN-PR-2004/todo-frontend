@@ -12,7 +12,7 @@ export default function Todo() {
   const [editTitle, setEditTitle] = useState("");
   const [editDescription, setEditDescription] = useState("");
 
-  const apiUrl = "https://todo-backend-uk0r.onrender.com";
+  const apiUrl = "  http://localhost:3000";
 
   const handleSubmit = () => {
     setError("");
